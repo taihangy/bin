@@ -1,0 +1,15 @@
+#!/bin/bash
+printf "%s\n" print args on "separate lines"
+echo "%b is like %s except that escape sequences in the arguments are translated:"
+printf "%b\n" "hello\nworld" "12\tword"
+printf "%d\n" 23 45 56.78 0xff 011
+printf "%f\n" 14.21 23 
+printf "%e\n" 12.34 23 56.789 123.45678
+printf "Integers can be printed in hexadecimal using %x for lowercase letters or %X for uppercase letters. For example, when specifying colors for a web page, they are specified in hex notation. I know from the rgb.txt file included with the X Window system that the red-green-blue values for royal blue are 65, 105, and 225. To convert them to a style rule for a web page, use this:"
+printf "color: #%02x%02x%02x;\n" 65 105 225
+printf "%12.4s %9.2f\n" John 2 Jackson 4.579 Walter 2.9
+
+#-v option to store the output to a variable
+printf -v num4 "%04d" 4
+printf "%s\n" "$num4"
+0004
